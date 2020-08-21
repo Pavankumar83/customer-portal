@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.pavan",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "monolith",
+    "baseName": "customerPortal",
+    "packageName": "com.pavan",
+    "packageFolder": "com/pavan",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjcxNzNmNzg2YWJmZjNiNWY1MjI1YTlkZDc3MmIxMzA0OGQ2MzZlZGZkYTk3ZTE0OTg3ZGM2YjI3ZDExZWY1OWIxMzc1MzAyYjM3YzQwMjJiN2JjYTVjODJmM2JjMjkyZjllYjJkYWRhMDg5YjFkMDUwYmNjZDk1MmY5MjNhYjQ=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1598003435951,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "hi", "te"],
+    "blueprints": []
+  }
+}
