@@ -14,7 +14,22 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142525_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142625_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142725_added_entity_LegalEntity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142825_added_entity_CustomerEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142925_added_entity_CustomerPhone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822143025_added_entity_CustomerAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822143125_added_entity_Institution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200823092313_added_entity_BankInfo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200822142525_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142625_added_entity_constraints_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142725_added_entity_constraints_LegalEntity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142825_added_entity_constraints_CustomerEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822142925_added_entity_constraints_CustomerPhone.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200822143025_added_entity_constraints_CustomerAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200823092313_added_entity_constraints_BankInfo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

@@ -1,0 +1,28 @@
+{
+  "customerPortalApp": {
+    "bankInfo": {
+      "home": {
+        "title": "BankInfos",
+        "createLabel": "नया Bank Info बनाएँ",
+        "createOrEditLabel": "Bank Info बनाएँ या संपादित करें",
+        "notFound": "No Bank Infos found"
+      },
+      "created": "एक नया Bank Info [identifier: {{ param }}] तैयार है",
+      "updated": "एक Bank Info [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Bank Info [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Bank Info [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Bank Info"
+      },
+      "name": "Name",
+      "accountHolder": "Account Holder",
+      "accountNumber": "Account Number",
+      "branchCode": "Branch Code",
+      "branchAddress": "Branch Address",
+      "ifscCode": "Ifsc Code",
+      "customer": "Customer"
+    }
+  }
+}

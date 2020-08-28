@@ -1,0 +1,28 @@
+{
+  "customerPortalApp": {
+    "bankInfo": {
+      "home": {
+        "title": "Bank Infos",
+        "createLabel": "Create a new Bank Info",
+        "createOrEditLabel": "Create or edit a Bank Info",
+        "notFound": "No Bank Infos found"
+      },
+      "created": "A new Bank Info is created with identifier {{ param }}",
+      "updated": "A Bank Info is updated with identifier {{ param }}",
+      "deleted": "A Bank Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bank Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Bank Info"
+      },
+      "name": "Name",
+      "accountHolder": "Account Holder",
+      "accountNumber": "Account Number",
+      "branchCode": "Branch Code",
+      "branchAddress": "Branch Address",
+      "ifscCode": "Ifsc Code",
+      "customer": "Customer"
+    }
+  }
+}

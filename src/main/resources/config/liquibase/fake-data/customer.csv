@@ -1,0 +1,11 @@
+id;name;identification_type;customer_type;deleted
+1;Assistant;OTHER;UNKNOWN;false
+2;Team-oriented;NATIONAL_ID;LEGAL_ENTITY;false
+3;Principal sky blue;PASSPORT;LEGAL_ENTITY;false
+4;synthesize mobile;OTHER;INDIVIDUAL;false
+5;Uzbekistan Sum;OTHER;UNKNOWN;true
+6;secondary database protocol;OTHER;LEGAL_ENTITY;true
+7;Kids;OTHER;INDIVIDUAL;false
+8;Electronics;OTHER;UNKNOWN;false
+9;COM Rhode Island;NATIONAL_ID;LEGAL_ENTITY;true
+10;Refined Hat Hat;OTHER;UNKNOWN;false

@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="customerAddress">
+            <h2><span jhiTranslate="customerPortalApp.customerAddress.detail.title">Customer Address</span> {{ customerAddress.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.address">Address</span></dt>
+                <dd>
+                    <span>{{ customerAddress.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.town">Town</span></dt>
+                <dd>
+                    <span>{{ customerAddress.town }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.city">City</span></dt>
+                <dd>
+                    <span>{{ customerAddress.city }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.zipCode">Zip Code</span></dt>
+                <dd>
+                    <span>{{ customerAddress.zipCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.state">State</span></dt>
+                <dd>
+                    <span>{{ customerAddress.state }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.country">Country</span></dt>
+                <dd>
+                    <span>{{ customerAddress.country }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ customerAddress.deleted }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerAddress.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="customerAddress.customer">
+                        <a [routerLink]="['/customer', customerAddress.customer?.id, 'view']">{{ customerAddress.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/customer-address', customerAddress.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

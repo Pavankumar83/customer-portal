@@ -1,0 +1,44 @@
+{
+  "name": "Institution",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tradeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "institution",
+      "relationshipName": "customer"
+    }
+  ],
+  "changelogDate": "20200822143125",
+  "entityTableName": "institution",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

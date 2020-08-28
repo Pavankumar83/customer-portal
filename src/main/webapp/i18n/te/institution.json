@@ -1,0 +1,27 @@
+{
+  "customerPortalApp": {
+    "institution": {
+      "home": {
+        "title": "Institutions",
+        "createLabel": "కొత్త Institution  సృష్టించండి",
+        "createOrEditLabel": "Institution సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Institutions found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Institution సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Institution సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Institution తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Institution {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Institution"
+      },
+      "name": "Name",
+      "tradeName": "Trade Name",
+      "taxNumber": "Tax Number",
+      "url": "Url",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Customer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "identificationType",
+      "fieldType": "IdentificationType",
+      "fieldValues": "PASSPORT,NATIONAL_ID,OTHER"
+    },
+    {
+      "fieldName": "customerType",
+      "fieldType": "CustomerType",
+      "fieldValues": "LEGAL_ENTITY,INDIVIDUAL,UNKNOWN"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customerEmail",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "customerEmail"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customerPhone",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "customerPhone"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customerAddress",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "customerAddress"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "bankInfo",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "bankInfo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "institution",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "institution",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200822142525",
+  "entityTableName": "customer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

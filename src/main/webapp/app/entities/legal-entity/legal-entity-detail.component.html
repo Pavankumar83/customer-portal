@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="legalEntity">
+            <h2><span jhiTranslate="customerPortalApp.legalEntity.detail.title">Legal Entity</span> {{ legalEntity.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.commercialName">Commercial Name</span></dt>
+                <dd>
+                    <span>{{ legalEntity.commercialName }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.taxNumber">Tax Number</span></dt>
+                <dd>
+                    <span>{{ legalEntity.taxNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.title">Title</span></dt>
+                <dd>
+                    <span>{{ legalEntity.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.dateOfStart">Date Of Start</span></dt>
+                <dd>
+                    <span>{{ legalEntity.dateOfStart }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.businessClosed">Business Closed</span></dt>
+                <dd>
+                    <span>{{ legalEntity.businessClosed }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.businessArea">Business Area</span></dt>
+                <dd>
+                    <span>{{ legalEntity.businessArea }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ legalEntity.deleted }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.legalEntity.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="legalEntity.customer">
+                        <a [routerLink]="['/customer', legalEntity.customer?.id, 'view']">{{ legalEntity.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/legal-entity', legalEntity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

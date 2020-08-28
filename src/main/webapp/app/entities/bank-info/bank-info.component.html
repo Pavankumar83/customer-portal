@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="customerPortalApp.bankInfo.home.title">Bank Infos</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-bank-info" [routerLink]="['/bank-info/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="customerPortalApp.bankInfo.home.createLabel">
+            Create a new Bank Info
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="bankInfos?.length === 0">
+        <span jhiTranslate="customerPortalApp.bankInfo.home.notFound">No bankInfos found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="bankInfos && bankInfos.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.accountHolder">Account Holder</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.accountNumber">Account Number</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.branchCode">Branch Code</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.branchAddress">Branch Address</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.ifscCode">Ifsc Code</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.customer">Customer</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bankInfo of bankInfos ;trackBy: trackId">
+                    <td><a [routerLink]="['/bank-info', bankInfo.id, 'view']">{{ bankInfo.id }}</a></td>
+                    <td>{{ bankInfo.name }}</td>
+                    <td>{{ bankInfo.accountHolder }}</td>
+                    <td>{{ bankInfo.accountNumber }}</td>
+                    <td>{{ bankInfo.branchCode }}</td>
+                    <td>{{ bankInfo.branchAddress }}</td>
+                    <td>{{ bankInfo.ifscCode }}</td>
+                    <td>
+                        <div *ngIf="bankInfo.customer">
+                            <a [routerLink]="['/customer', bankInfo.customer?.id, 'view']" >{{ bankInfo.customer?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/bank-info', bankInfo.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/bank-info', bankInfo.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(bankInfo)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

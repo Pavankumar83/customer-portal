@@ -1,0 +1,25 @@
+{
+  "customerPortalApp": {
+    "customerPhone": {
+      "home": {
+        "title": "Customer Phones",
+        "createLabel": "కొత్త Customer Phone  సృష్టించండి",
+        "createOrEditLabel": "Customer Phone సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Customer Phones found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Customer Phone సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Customer Phone సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Customer Phone తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Customer Phone {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Customer Phone"
+      },
+      "phoneNumber": "Phone Number",
+      "extension": "Extension",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

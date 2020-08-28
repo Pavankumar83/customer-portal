@@ -1,0 +1,25 @@
+{
+  "customerPortalApp": {
+    "customerPhone": {
+      "home": {
+        "title": "Customer Phones",
+        "createLabel": "Create a new Customer Phone",
+        "createOrEditLabel": "Create or edit a Customer Phone",
+        "notFound": "No Customer Phones found"
+      },
+      "created": "A new Customer Phone is created with identifier {{ param }}",
+      "updated": "A Customer Phone is updated with identifier {{ param }}",
+      "deleted": "A Customer Phone is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer Phone {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Phone"
+      },
+      "phoneNumber": "Phone Number",
+      "extension": "Extension",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "customerPortalApp": {
+    "customerEmail": {
+      "home": {
+        "title": "Customer Emails",
+        "createLabel": "Create a new Customer Email",
+        "createOrEditLabel": "Create or edit a Customer Email",
+        "notFound": "No Customer Emails found"
+      },
+      "created": "A new Customer Email is created with identifier {{ param }}",
+      "updated": "A Customer Email is updated with identifier {{ param }}",
+      "deleted": "A Customer Email is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer Email {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Email"
+      },
+      "email": "Email",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

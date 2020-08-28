@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="customerEmail">
+            <h2><span jhiTranslate="customerPortalApp.customerEmail.detail.title">Customer Email</span> {{ customerEmail.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.customerEmail.email">Email</span></dt>
+                <dd>
+                    <span>{{ customerEmail.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerEmail.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ customerEmail.deleted }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerEmail.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="customerEmail.customer">
+                        <a [routerLink]="['/customer', customerEmail.customer?.id, 'view']">{{ customerEmail.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/customer-email', customerEmail.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

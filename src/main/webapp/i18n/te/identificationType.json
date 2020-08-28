@@ -1,0 +1,10 @@
+{
+  "customerPortalApp": {
+    "IdentificationType": {
+      "null": "",
+      "PASSPORT": "PASSPORT",
+      "NATIONAL_ID": "NATIONAL_ID",
+      "OTHER": "OTHER"
+    }
+  }
+}

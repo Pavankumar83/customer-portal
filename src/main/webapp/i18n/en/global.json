@@ -7,6 +7,14 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "customer": "Customer",
+        "person": "Person",
+        "legalEntity": "Legal Entity",
+        "customerEmail": "Customer Email",
+        "customerPhone": "Customer Phone",
+        "customerAddress": "Customer Address",
+        "institution": "Institution",
+        "bankInfo": "Bank Info",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

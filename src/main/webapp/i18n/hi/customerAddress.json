@@ -1,0 +1,29 @@
+{
+  "customerPortalApp": {
+    "customerAddress": {
+      "home": {
+        "title": "CustomerAddresses",
+        "createLabel": "नया Customer Address बनाएँ",
+        "createOrEditLabel": "Customer Address बनाएँ या संपादित करें",
+        "notFound": "No Customer Addresses found"
+      },
+      "created": "एक नया Customer Address [identifier: {{ param }}] तैयार है",
+      "updated": "एक Customer Address [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Customer Address [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Customer Address [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Customer Address"
+      },
+      "address": "Address",
+      "town": "Town",
+      "city": "City",
+      "zipCode": "Zip Code",
+      "state": "State",
+      "country": "Country",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

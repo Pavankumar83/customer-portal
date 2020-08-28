@@ -1,0 +1,25 @@
+{
+  "customerPortalApp": {
+    "customerPhone": {
+      "home": {
+        "title": "CustomerPhones",
+        "createLabel": "नया Customer Phone बनाएँ",
+        "createOrEditLabel": "Customer Phone बनाएँ या संपादित करें",
+        "notFound": "No Customer Phones found"
+      },
+      "created": "एक नया Customer Phone [identifier: {{ param }}] तैयार है",
+      "updated": "एक Customer Phone [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Customer Phone [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Customer Phone [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Customer Phone"
+      },
+      "phoneNumber": "Phone Number",
+      "extension": "Extension",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

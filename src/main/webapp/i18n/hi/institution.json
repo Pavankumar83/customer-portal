@@ -1,0 +1,27 @@
+{
+  "customerPortalApp": {
+    "institution": {
+      "home": {
+        "title": "Institutions",
+        "createLabel": "नया Institution बनाएँ",
+        "createOrEditLabel": "Institution बनाएँ या संपादित करें",
+        "notFound": "No Institutions found"
+      },
+      "created": "एक नया Institution [identifier: {{ param }}] तैयार है",
+      "updated": "एक Institution [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Institution [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Institution [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Institution"
+      },
+      "name": "Name",
+      "tradeName": "Trade Name",
+      "taxNumber": "Tax Number",
+      "url": "Url",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

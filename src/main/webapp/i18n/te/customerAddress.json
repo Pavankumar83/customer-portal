@@ -1,0 +1,29 @@
+{
+  "customerPortalApp": {
+    "customerAddress": {
+      "home": {
+        "title": "Customer Addresses",
+        "createLabel": "కొత్త Customer Address  సృష్టించండి",
+        "createOrEditLabel": "Customer Address సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Customer Addresses found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Customer Address సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Customer Address సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Customer Address తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Customer Address {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Customer Address"
+      },
+      "address": "Address",
+      "town": "Town",
+      "city": "City",
+      "zipCode": "Zip Code",
+      "state": "State",
+      "country": "Country",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

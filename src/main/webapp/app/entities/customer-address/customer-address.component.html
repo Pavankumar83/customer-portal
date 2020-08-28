@@ -1,0 +1,79 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="customerPortalApp.customerAddress.home.title">Customer Addresses</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer-address" [routerLink]="['/customer-address/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="customerPortalApp.customerAddress.home.createLabel">
+            Create a new Customer Address
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="customerAddresses?.length === 0">
+        <span jhiTranslate="customerPortalApp.customerAddress.home.notFound">No customerAddresses found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="customerAddresses && customerAddresses.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.address">Address</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.town">Town</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.city">City</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.zipCode">Zip Code</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.state">State</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.country">Country</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.deleted">Deleted</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.customerAddress.customer">Customer</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customerAddress of customerAddresses ;trackBy: trackId">
+                    <td><a [routerLink]="['/customer-address', customerAddress.id, 'view']">{{ customerAddress.id }}</a></td>
+                    <td>{{ customerAddress.address }}</td>
+                    <td>{{ customerAddress.town }}</td>
+                    <td>{{ customerAddress.city }}</td>
+                    <td>{{ customerAddress.zipCode }}</td>
+                    <td>{{ customerAddress.state }}</td>
+                    <td>{{ customerAddress.country }}</td>
+                    <td>{{ customerAddress.deleted }}</td>
+                    <td>
+                        <div *ngIf="customerAddress.customer">
+                            <a [routerLink]="['/customer', customerAddress.customer?.id, 'view']" >{{ customerAddress.customer?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/customer-address', customerAddress.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/customer-address', customerAddress.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(customerAddress)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

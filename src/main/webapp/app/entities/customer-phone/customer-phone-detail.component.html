@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="customerPhone">
+            <h2><span jhiTranslate="customerPortalApp.customerPhone.detail.title">Customer Phone</span> {{ customerPhone.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.customerPhone.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{ customerPhone.phoneNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerPhone.extension">Extension</span></dt>
+                <dd>
+                    <span>{{ customerPhone.extension }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerPhone.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ customerPhone.deleted }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.customerPhone.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="customerPhone.customer">
+                        <a [routerLink]="['/customer', customerPhone.customer?.id, 'view']">{{ customerPhone.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/customer-phone', customerPhone.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

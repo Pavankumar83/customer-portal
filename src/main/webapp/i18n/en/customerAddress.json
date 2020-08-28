@@ -1,0 +1,29 @@
+{
+  "customerPortalApp": {
+    "customerAddress": {
+      "home": {
+        "title": "Customer Addresses",
+        "createLabel": "Create a new Customer Address",
+        "createOrEditLabel": "Create or edit a Customer Address",
+        "notFound": "No Customer Addresses found"
+      },
+      "created": "A new Customer Address is created with identifier {{ param }}",
+      "updated": "A Customer Address is updated with identifier {{ param }}",
+      "deleted": "A Customer Address is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer Address {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Address"
+      },
+      "address": "Address",
+      "town": "Town",
+      "city": "City",
+      "zipCode": "Zip Code",
+      "state": "State",
+      "country": "Country",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

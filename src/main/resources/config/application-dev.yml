@@ -23,7 +23,7 @@ spring:
   profiles:
     active: dev
     include:
-      - swagger
+      #- swagger
       # Uncomment to activate TLS for the dev profile
       #- tls
   devtools:
@@ -37,9 +37,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/customerPortal
-    username: customerPortal
-    password:
+    url: jdbc:postgresql://localhost:5432/customerportal
+    username: postgres
+    password: pavan
     hikari:
       poolName: Hikari
       auto-commit: false

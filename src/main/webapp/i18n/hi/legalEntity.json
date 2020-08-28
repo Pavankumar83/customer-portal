@@ -1,0 +1,29 @@
+{
+  "customerPortalApp": {
+    "legalEntity": {
+      "home": {
+        "title": "LegalEntities",
+        "createLabel": "नया Legal Entity बनाएँ",
+        "createOrEditLabel": "Legal Entity बनाएँ या संपादित करें",
+        "notFound": "No Legal Entities found"
+      },
+      "created": "एक नया Legal Entity [identifier: {{ param }}] तैयार है",
+      "updated": "एक Legal Entity [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Legal Entity [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Legal Entity [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Legal Entity"
+      },
+      "commercialName": "Commercial Name",
+      "taxNumber": "Tax Number",
+      "title": "Title",
+      "dateOfStart": "Date Of Start",
+      "businessClosed": "Business Closed",
+      "businessArea": "Business Area",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

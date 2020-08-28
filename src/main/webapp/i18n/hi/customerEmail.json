@@ -1,0 +1,24 @@
+{
+  "customerPortalApp": {
+    "customerEmail": {
+      "home": {
+        "title": "CustomerEmails",
+        "createLabel": "नया Customer Email बनाएँ",
+        "createOrEditLabel": "Customer Email बनाएँ या संपादित करें",
+        "notFound": "No Customer Emails found"
+      },
+      "created": "एक नया Customer Email [identifier: {{ param }}] तैयार है",
+      "updated": "एक Customer Email [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Customer Email [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Customer Email [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Customer Email"
+      },
+      "email": "Email",
+      "deleted": "Deleted",
+      "customer": "Customer"
+    }
+  }
+}

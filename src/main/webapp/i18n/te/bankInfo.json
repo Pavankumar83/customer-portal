@@ -1,0 +1,28 @@
+{
+  "customerPortalApp": {
+    "bankInfo": {
+      "home": {
+        "title": "Bank Infos",
+        "createLabel": "కొత్త Bank Info  సృష్టించండి",
+        "createOrEditLabel": "Bank Info సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Bank Infos found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Bank Info సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Bank Info సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Bank Info తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Bank Info {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Bank Info"
+      },
+      "name": "Name",
+      "accountHolder": "Account Holder",
+      "accountNumber": "Account Number",
+      "branchCode": "Branch Code",
+      "branchAddress": "Branch Address",
+      "ifscCode": "Ifsc Code",
+      "customer": "Customer"
+    }
+  }
+}

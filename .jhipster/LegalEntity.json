@@ -1,0 +1,54 @@
+{
+  "name": "LegalEntity",
+  "fields": [
+    {
+      "fieldName": "commercialName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateOfStart",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "businessClosed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "businessArea",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "legalEntity",
+      "relationshipName": "customer",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20200822142725",
+  "entityTableName": "legal_entity",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

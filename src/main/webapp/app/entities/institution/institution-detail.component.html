@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="institution">
+            <h2><span jhiTranslate="customerPortalApp.institution.detail.title">Institution</span> {{ institution.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.institution.name">Name</span></dt>
+                <dd>
+                    <span>{{ institution.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.institution.tradeName">Trade Name</span></dt>
+                <dd>
+                    <span>{{ institution.tradeName }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.institution.taxNumber">Tax Number</span></dt>
+                <dd>
+                    <span>{{ institution.taxNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.institution.url">Url</span></dt>
+                <dd>
+                    <span>{{ institution.url }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.institution.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ institution.deleted }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/institution', institution.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
