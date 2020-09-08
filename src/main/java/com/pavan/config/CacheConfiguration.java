@@ -61,6 +61,14 @@ public class CacheConfiguration {
             createCache(cm, com.pavan.domain.Institution.class.getName() + ".customers");
             createCache(cm, com.pavan.domain.Customer.class.getName() + ".bankInfos");
             createCache(cm, com.pavan.domain.BankInfo.class.getName());
+            createCache(cm, com.pavan.domain.Customer.class.getName() + ".availableTransactions");
+            createCache(cm, com.pavan.domain.Customer.class.getName() + ".reports");
+            createCache(cm, com.pavan.domain.AvailableTransaction.class.getName());
+            createCache(cm, com.pavan.domain.Report.class.getName());
+            createCache(cm, com.pavan.domain.BankInfo.class.getName() + ".availableTransactions");
+            createCache(cm, com.pavan.domain.Institution.class.getName() + ".bankInfos");
+            createCache(cm, com.pavan.domain.NonWorkingDay.class.getName());
+            createCache(cm, com.pavan.domain.Institution.class.getName() + ".nonWorkingDays");
             // jhipster-needle-ehcache-add-entry
         };
     }

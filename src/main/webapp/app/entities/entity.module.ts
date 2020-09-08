@@ -36,6 +36,31 @@ import { RouterModule } from '@angular/router';
         path: 'bank-info',
         loadChildren: () => import('./bank-info/bank-info.module').then(m => m.CustomerPortalBankInfoModule),
       },
+      {
+        path: 'available-transaction',
+        loadChildren: () =>
+          import('./available-transaction/available-transaction.module').then(m => m.CustomerPortalAvailableTransactionModule),
+      },
+      {
+        path: 'report',
+        loadChildren: () => import('./report/report.module').then(m => m.CustomerPortalReportModule),
+      },
+      {
+        path: 'products',
+        loadChildren: () => import('./products/products.module').then(m => m.CustomerPortalProductsModule),
+      },
+      {
+        path: 'orders',
+        loadChildren: () => import('./orders/orders.module').then(m => m.CustomerPortalOrdersModule),
+      },
+      {
+        path: 'order-product',
+        loadChildren: () => import('./order-product/order-product.module').then(m => m.CustomerPortalOrderProductModule),
+      },
+      {
+        path: 'non-working-day',
+        loadChildren: () => import('./non-working-day/non-working-day.module').then(m => m.CustomerPortalNonWorkingDayModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

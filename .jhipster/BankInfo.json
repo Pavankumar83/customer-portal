@@ -6,13 +6,15 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "accountHolder",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "accountNumber",
       "fieldType": "String",
-      "fieldValidationRules": ["Required","unique"]
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "accountHolder",
+      "fieldType": "String"
     },
     {
       "fieldName": "branchCode",
@@ -28,6 +30,19 @@
     }
   ],
   "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "availableTransaction",
+      "otherEntityRelationshipName": "account",
+      "relationshipName": "availableTransaction"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "institution",
+      "otherEntityRelationshipName": "bankInfo",
+      "relationshipName": "institution",
+      "otherEntityField": "id"
+    },
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "customer",

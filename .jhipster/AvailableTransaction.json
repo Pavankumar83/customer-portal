@@ -1,0 +1,69 @@
+{
+  "name": "AvailableTransaction",
+  "fields": [
+    {
+      "fieldName": "transactionId",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "transactionType",
+      "fieldType": "TransactionType",
+      "fieldValues": "INTEREST,DIVIDENDS,CAPITAL_GAINS,ROYALTIES,INVESTMENTS,PROPERTY,ACTIVE",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "transactionMode",
+      "fieldType": "TransactionMode",
+      "fieldValues": "DEBIT,CREDIT",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "transAmount",
+      "fieldType": "Double",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dateOfTransaction",
+      "fieldType": "Instant",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "availableTransaction",
+      "relationshipName": "customer",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "bankInfo",
+      "otherEntityRelationshipName": "availableTransaction",
+      "relationshipName": "account",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200829100844",
+  "entityTableName": "available_transaction",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -41,7 +41,11 @@ public class Institution implements Serializable {
 
     @OneToMany(mappedBy = "institution")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Set<Customer> customers = new HashSet<>();
+    private Set<BankInfo> bankInfos = new HashSet<>();
+
+    @OneToMany(mappedBy = "institution")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<NonWorkingDay> nonWorkingDays = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -117,29 +121,54 @@ public class Institution implements Serializable {
         this.deleted = deleted;
     }
 
-    public Set<Customer> getCustomers() {
-        return customers;
+    public Set<BankInfo> getBankInfos() {
+        return bankInfos;
     }
 
-    public Institution customers(Set<Customer> customers) {
-        this.customers = customers;
+    public Institution bankInfos(Set<BankInfo> bankInfos) {
+        this.bankInfos = bankInfos;
         return this;
     }
 
-    public Institution addCustomer(Customer customer) {
-        this.customers.add(customer);
-        customer.setInstitution(this);
+    public Institution addBankInfo(BankInfo bankInfo) {
+        this.bankInfos.add(bankInfo);
+        bankInfo.setInstitution(this);
         return this;
     }
 
-    public Institution removeCustomer(Customer customer) {
-        this.customers.remove(customer);
-        customer.setInstitution(null);
+    public Institution removeBankInfo(BankInfo bankInfo) {
+        this.bankInfos.remove(bankInfo);
+        bankInfo.setInstitution(null);
         return this;
     }
 
-    public void setCustomers(Set<Customer> customers) {
-        this.customers = customers;
+    public void setBankInfos(Set<BankInfo> bankInfos) {
+        this.bankInfos = bankInfos;
+    }
+
+    public Set<NonWorkingDay> getNonWorkingDays() {
+        return nonWorkingDays;
+    }
+
+    public Institution nonWorkingDays(Set<NonWorkingDay> nonWorkingDays) {
+        this.nonWorkingDays = nonWorkingDays;
+        return this;
+    }
+
+    public Institution addNonWorkingDay(NonWorkingDay nonWorkingDay) {
+        this.nonWorkingDays.add(nonWorkingDay);
+        nonWorkingDay.setInstitution(this);
+        return this;
+    }
+
+    public Institution removeNonWorkingDay(NonWorkingDay nonWorkingDay) {
+        this.nonWorkingDays.remove(nonWorkingDay);
+        nonWorkingDay.setInstitution(null);
+        return this;
+    }
+
+    public void setNonWorkingDays(Set<NonWorkingDay> nonWorkingDays) {
+        this.nonWorkingDays = nonWorkingDays;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 

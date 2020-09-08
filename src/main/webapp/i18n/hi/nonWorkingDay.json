@@ -1,0 +1,24 @@
+{
+  "customerPortalApp": {
+    "nonWorkingDay": {
+      "home": {
+        "title": "NonWorkingDays",
+        "createLabel": "नया Non Working Day बनाएँ",
+        "createOrEditLabel": "Non Working Day बनाएँ या संपादित करें",
+        "notFound": "No Non Working Days found"
+      },
+      "created": "एक नया Non Working Day [identifier: {{ param }}] तैयार है",
+      "updated": "एक Non Working Day [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Non Working Day [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Non Working Day [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Non Working Day"
+      },
+      "nonWorkingDay": "Non Working Day",
+      "deleted": "Deleted",
+      "institution": "Institution"
+    }
+  }
+}

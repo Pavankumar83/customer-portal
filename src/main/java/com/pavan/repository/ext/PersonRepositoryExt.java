@@ -16,7 +16,7 @@ public interface PersonRepositoryExt extends PersonRepository {
     @Query("select p from Person p where p.id = :id")
    Optional<Person> findPersonById(@Param("id") Long id);
 
-      @Query("SELECT " +
+      /*@Query("SELECT " +
           "new com.pavan.dto.PersonDTO(per.id,bi.id,bi.accountHolder,bi.accountNumber,bi.branchCode,email.email,phone.extension,phone.phoneNumber)" +
           "FROM " +
           " Person as per " +
@@ -26,6 +26,8 @@ public interface PersonRepositoryExt extends PersonRepository {
           "        ON email.customer.id = bi.customer.id " +
           "  join CustomerPhone phone " +
           "       on phone.customer.id = bi.customer.id " +
-          "where per.id=:id ")
+          "where per.id=:id ")*/
     List<PersonDTO> getPersonDetailsById(@Param("id") Long id);
+
+
 }

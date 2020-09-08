@@ -21,7 +21,8 @@
       "taxNumber": "Tax Number",
       "url": "Url",
       "deleted": "Deleted",
-      "customer": "Customer"
+      "bankInfo": "Bank Info",
+      "nonWorkingDay": "Non Working Day"
     }
   }
 }

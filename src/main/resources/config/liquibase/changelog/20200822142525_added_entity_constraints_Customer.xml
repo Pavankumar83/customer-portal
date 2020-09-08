@@ -7,12 +7,9 @@
         Added the constraints for entity Customer.
     -->
     <changeSet id="20200822142525-2" author="jhipster">
-        
-        <addForeignKeyConstraint baseColumnNames="institution_id"
-                                 baseTableName="customer"
-                                 constraintName="fk_customer_institution_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="institution"/>
+
+
+
 
     </changeSet>
 </databaseChangeLog>

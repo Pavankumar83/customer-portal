@@ -1,0 +1,24 @@
+{
+  "customerPortalApp": {
+    "nonWorkingDay": {
+      "home": {
+        "title": "Non Working Days",
+        "createLabel": "Create a new Non Working Day",
+        "createOrEditLabel": "Create or edit a Non Working Day",
+        "notFound": "No Non Working Days found"
+      },
+      "created": "A new Non Working Day is created with identifier {{ param }}",
+      "updated": "A Non Working Day is updated with identifier {{ param }}",
+      "deleted": "A Non Working Day is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Non Working Day {{ id }}?"
+      },
+      "detail": {
+        "title": "Non Working Day"
+      },
+      "nonWorkingDay": "Non Working Day",
+      "deleted": "Deleted",
+      "institution": "Institution"
+    }
+  }
+}

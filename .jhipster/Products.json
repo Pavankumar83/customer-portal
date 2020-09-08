@@ -1,0 +1,40 @@
+{
+  "name": "Products",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "pictureUrl",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "orders",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "orders",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200901085750",
+  "entityTableName": "products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

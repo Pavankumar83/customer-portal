@@ -46,11 +46,16 @@
       "relationshipName": "bankInfo"
     },
     {
-      "relationshipType": "many-to-one",
-      "otherEntityName": "institution",
+      "relationshipType": "one-to-many",
+      "otherEntityName": "availableTransaction",
       "otherEntityRelationshipName": "customer",
-      "relationshipName": "institution",
-      "otherEntityField": "id"
+      "relationshipName": "availableTransaction"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "report",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "report"
     }
   ],
   "changelogDate": "20200822142525",

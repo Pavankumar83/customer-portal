@@ -1,0 +1,24 @@
+{
+  "customerPortalApp": {
+    "orders": {
+      "home": {
+        "title": "Orders",
+        "createLabel": "नया Orders बनाएँ",
+        "createOrEditLabel": "Orders बनाएँ या संपादित करें",
+        "notFound": "No Orders found"
+      },
+      "created": "एक नया Orders [identifier: {{ param }}] तैयार है",
+      "updated": "एक Orders [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Orders [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Orders [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Orders"
+      },
+      "dateCreated": "Date Created",
+      "status": "Status",
+      "products": "Products"
+    }
+  }
+}

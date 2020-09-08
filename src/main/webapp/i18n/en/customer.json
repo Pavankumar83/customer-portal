@@ -24,7 +24,8 @@
       "customerPhone": "Customer Phone",
       "customerAddress": "Customer Address",
       "bankInfo": "Bank Info",
-      "institution": "Institution"
+      "availableTransaction": "Available Transaction",
+      "report": "Report"
     }
   }
 }

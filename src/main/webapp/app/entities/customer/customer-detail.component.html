@@ -24,12 +24,6 @@
                 <dd>
                     <span>{{ customer.deleted }}</span>
                 </dd>
-                <dt><span jhiTranslate="customerPortalApp.customer.institution">Institution</span></dt>
-                <dd>
-                    <div *ngIf="customer.institution">
-                        <a [routerLink]="['/institution', customer.institution?.id, 'view']">{{ customer.institution?.id }}</a>
-                    </div>
-                </dd>
             </dl>
 
             <button type="submit"

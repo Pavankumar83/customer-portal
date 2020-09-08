@@ -2,7 +2,8 @@ import { ICustomerEmail } from 'app/shared/model/customer-email.model';
 import { ICustomerPhone } from 'app/shared/model/customer-phone.model';
 import { ICustomerAddress } from 'app/shared/model/customer-address.model';
 import { IBankInfo } from 'app/shared/model/bank-info.model';
-import { IInstitution } from 'app/shared/model/institution.model';
+import { IAvailableTransaction } from 'app/shared/model/available-transaction.model';
+import { IReport } from 'app/shared/model/report.model';
 import { IdentificationType } from 'app/shared/model/enumerations/identification-type.model';
 import { CustomerType } from 'app/shared/model/enumerations/customer-type.model';
 
@@ -16,7 +17,8 @@ export interface ICustomer {
   customerPhones?: ICustomerPhone[];
   customerAddresses?: ICustomerAddress[];
   bankInfos?: IBankInfo[];
-  institution?: IInstitution;
+  availableTransactions?: IAvailableTransaction[];
+  reports?: IReport[];
 }
 
 export class Customer implements ICustomer {
@@ -30,7 +32,8 @@ export class Customer implements ICustomer {
     public customerPhones?: ICustomerPhone[],
     public customerAddresses?: ICustomerAddress[],
     public bankInfos?: IBankInfo[],
-    public institution?: IInstitution
+    public availableTransactions?: IAvailableTransaction[],
+    public reports?: IReport[]
   ) {
     this.deleted = this.deleted || false;
   }

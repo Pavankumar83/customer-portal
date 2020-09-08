@@ -1,6 +1,5 @@
 package com.pavan.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -59,9 +58,13 @@ public class Customer implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Set<BankInfo> bankInfos = new HashSet<>();
 
-    @ManyToOne
-    @JsonIgnoreProperties(value = "customers", allowSetters = true)
-    private Institution institution;
+    @OneToMany(mappedBy = "customer")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<AvailableTransaction> availableTransactions = new HashSet<>();
+
+    @OneToMany(mappedBy = "customer")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<Report> reports = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -224,17 +227,54 @@ public class Customer implements Serializable {
         this.bankInfos = bankInfos;
     }
 
-    public Institution getInstitution() {
-        return institution;
+    public Set<AvailableTransaction> getAvailableTransactions() {
+        return availableTransactions;
     }
 
-    public Customer institution(Institution institution) {
-        this.institution = institution;
+    public Customer availableTransactions(Set<AvailableTransaction> availableTransactions) {
+        this.availableTransactions = availableTransactions;
         return this;
     }
 
-    public void setInstitution(Institution institution) {
-        this.institution = institution;
+    public Customer addAvailableTransaction(AvailableTransaction availableTransaction) {
+        this.availableTransactions.add(availableTransaction);
+        availableTransaction.setCustomer(this);
+        return this;
+    }
+
+    public Customer removeAvailableTransaction(AvailableTransaction availableTransaction) {
+        this.availableTransactions.remove(availableTransaction);
+        availableTransaction.setCustomer(null);
+        return this;
+    }
+
+    public void setAvailableTransactions(Set<AvailableTransaction> availableTransactions) {
+        this.availableTransactions = availableTransactions;
+    }
+
+    public Set<Report> getReports() {
+        return reports;
+    }
+
+    public Customer reports(Set<Report> reports) {
+        this.reports = reports;
+        return this;
+    }
+
+    public Customer addReport(Report report) {
+        this.reports.add(report);
+        report.setCustomer(this);
+        return this;
+    }
+
+    public Customer removeReport(Report report) {
+        this.reports.remove(report);
+        report.setCustomer(null);
+        return this;
+    }
+
+    public void setReports(Set<Report> reports) {
+        this.reports = reports;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 

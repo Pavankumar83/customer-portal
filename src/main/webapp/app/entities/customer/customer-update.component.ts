@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
 
 import { ICustomer, Customer } from 'app/shared/model/customer.model';
 import { CustomerService } from './customer.service';
-import { IInstitution } from 'app/shared/model/institution.model';
-import { InstitutionService } from 'app/entities/institution/institution.service';
 
 @Component({
   selector: 'jhi-customer-update',
@@ -16,7 +14,6 @@ import { InstitutionService } from 'app/entities/institution/institution.service
 })
 export class CustomerUpdateComponent implements OnInit {
   isSaving = false;
-  institutions: IInstitution[] = [];
 
   editForm = this.fb.group({
     id: [],
@@ -24,21 +21,13 @@ export class CustomerUpdateComponent implements OnInit {
     identificationType: [],
     customerType: [],
     deleted: [],
-    institution: [],
   });
 
-  constructor(
-    protected customerService: CustomerService,
-    protected institutionService: InstitutionService,
-    protected activatedRoute: ActivatedRoute,
-    private fb: FormBuilder
-  ) {}
+  constructor(protected customerService: CustomerService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ customer }) => {
       this.updateForm(customer);
-
-      this.institutionService.query().subscribe((res: HttpResponse<IInstitution[]>) => (this.institutions = res.body || []));
     });
   }
 
@@ -49,7 +38,6 @@ export class CustomerUpdateComponent implements OnInit {
       identificationType: customer.identificationType,
       customerType: customer.customerType,
       deleted: customer.deleted,
-      institution: customer.institution,
     });
   }
 
@@ -75,7 +63,6 @@ export class CustomerUpdateComponent implements OnInit {
       identificationType: this.editForm.get(['identificationType'])!.value,
       customerType: this.editForm.get(['customerType'])!.value,
       deleted: this.editForm.get(['deleted'])!.value,
-      institution: this.editForm.get(['institution'])!.value,
     };
   }
 
@@ -93,9 +80,5 @@ export class CustomerUpdateComponent implements OnInit {
 
   protected onSaveError(): void {
     this.isSaving = false;
-  }
-
-  trackById(index: number, item: IInstitution): any {
-    return item.id;
   }
 }

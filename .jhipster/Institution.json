@@ -25,9 +25,15 @@
   "relationships": [
     {
       "relationshipType": "one-to-many",
-      "otherEntityName": "customer",
+      "otherEntityName": "bankInfo",
       "otherEntityRelationshipName": "institution",
-      "relationshipName": "customer"
+      "relationshipName": "bankInfo"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "nonWorkingDay",
+      "otherEntityRelationshipName": "institution",
+      "relationshipName": "nonWorkingDay"
     }
   ],
   "changelogDate": "20200822143125",

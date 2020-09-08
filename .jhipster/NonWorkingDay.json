@@ -1,0 +1,33 @@
+{
+  "name": "NonWorkingDay",
+  "fields": [
+    {
+      "fieldName": "nonWorkingDay",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deleted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "institution",
+      "otherEntityRelationshipName": "nonWorkingDay",
+      "relationshipName": "institution",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200901111907",
+  "entityTableName": "non_working_day",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

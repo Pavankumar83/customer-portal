@@ -1,0 +1,9 @@
+{
+  "customerPortalApp": {
+    "TransactionMode": {
+      "null": "",
+      "DEBIT": "DEBIT",
+      "CREDIT": "CREDIT"
+    }
+  }
+}

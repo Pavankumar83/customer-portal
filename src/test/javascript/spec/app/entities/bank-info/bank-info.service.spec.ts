@@ -55,8 +55,8 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             name: 'BBBBBB',
-            accountHolder: 'BBBBBB',
             accountNumber: 'BBBBBB',
+            accountHolder: 'BBBBBB',
             branchCode: 'BBBBBB',
             branchAddress: 'BBBBBB',
             ifscCode: 'BBBBBB',
@@ -77,8 +77,8 @@ describe('Service Tests', () => {
         const returnedFromService = Object.assign(
           {
             name: 'BBBBBB',
-            accountHolder: 'BBBBBB',
             accountNumber: 'BBBBBB',
+            accountHolder: 'BBBBBB',
             branchCode: 'BBBBBB',
             branchAddress: 'BBBBBB',
             ifscCode: 'BBBBBB',

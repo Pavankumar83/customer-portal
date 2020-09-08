@@ -5,8 +5,11 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A BankInfo.
@@ -26,11 +29,12 @@ public class BankInfo implements Serializable {
     @Column(name = "name")
     private String name;
 
+    @NotNull
+    @Column(name = "account_number", nullable = false)
+    private String accountNumber;
+
     @Column(name = "account_holder")
     private String accountHolder;
-
-    @Column(name = "account_number",unique = true)
-    private String accountNumber;
 
     @Column(name = "branch_code")
     private String branchCode;
@@ -40,6 +44,14 @@ public class BankInfo implements Serializable {
 
     @Column(name = "ifsc_code")
     private String ifscCode;
+
+    @OneToMany(mappedBy = "account")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<AvailableTransaction> availableTransactions = new HashSet<>();
+
+    @ManyToOne
+    @JsonIgnoreProperties(value = "bankInfos", allowSetters = true)
+    private Institution institution;
 
     @ManyToOne
     @JsonIgnoreProperties(value = "bankInfos", allowSetters = true)
@@ -67,19 +79,6 @@ public class BankInfo implements Serializable {
         this.name = name;
     }
 
-    public String getAccountHolder() {
-        return accountHolder;
-    }
-
-    public BankInfo accountHolder(String accountHolder) {
-        this.accountHolder = accountHolder;
-        return this;
-    }
-
-    public void setAccountHolder(String accountHolder) {
-        this.accountHolder = accountHolder;
-    }
-
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -91,6 +90,19 @@ public class BankInfo implements Serializable {
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    public BankInfo accountHolder(String accountHolder) {
+        this.accountHolder = accountHolder;
+        return this;
+    }
+
+    public void setAccountHolder(String accountHolder) {
+        this.accountHolder = accountHolder;
     }
 
     public String getBranchCode() {
@@ -132,6 +144,44 @@ public class BankInfo implements Serializable {
         this.ifscCode = ifscCode;
     }
 
+    public Set<AvailableTransaction> getAvailableTransactions() {
+        return availableTransactions;
+    }
+
+    public BankInfo availableTransactions(Set<AvailableTransaction> availableTransactions) {
+        this.availableTransactions = availableTransactions;
+        return this;
+    }
+
+    public BankInfo addAvailableTransaction(AvailableTransaction availableTransaction) {
+        this.availableTransactions.add(availableTransaction);
+        availableTransaction.setAccount(this);
+        return this;
+    }
+
+    public BankInfo removeAvailableTransaction(AvailableTransaction availableTransaction) {
+        this.availableTransactions.remove(availableTransaction);
+        availableTransaction.setAccount(null);
+        return this;
+    }
+
+    public void setAvailableTransactions(Set<AvailableTransaction> availableTransactions) {
+        this.availableTransactions = availableTransactions;
+    }
+
+    public Institution getInstitution() {
+        return institution;
+    }
+
+    public BankInfo institution(Institution institution) {
+        this.institution = institution;
+        return this;
+    }
+
+    public void setInstitution(Institution institution) {
+        this.institution = institution;
+    }
+
     public Customer getCustomer() {
         return customer;
     }
@@ -168,8 +218,8 @@ public class BankInfo implements Serializable {
         return "BankInfo{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
-            ", accountHolder='" + getAccountHolder() + "'" +
             ", accountNumber='" + getAccountNumber() + "'" +
+            ", accountHolder='" + getAccountHolder() + "'" +
             ", branchCode='" + getBranchCode() + "'" +
             ", branchAddress='" + getBranchAddress() + "'" +
             ", ifscCode='" + getIfscCode() + "'" +

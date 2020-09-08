@@ -2,6 +2,7 @@ package com.pavan.web.rest.ext;
 
 import com.pavan.dto.PersonDTO;
 import com.pavan.dto.PersonDTO2;
+import com.pavan.service.FileReaderService;
 import com.pavan.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,17 @@ import java.util.List;
 @RequestMapping("/api")
 public class PersonResourceExt {
 
+
     @Autowired
-    PersonService personService;
+    private PersonService personService;
+
+    @Autowired
+    private FileReaderService service;
+
+    @GetMapping(path = "/savefile")
+    public void saveFile(){
+          // service.readMutlipleFilesFromDirectory();
+    }
 
     @GetMapping(path = "/person-by-id/{id}")
     public List<PersonDTO> getPersonById(@PathVariable("id") Long id){
@@ -34,4 +44,5 @@ public class PersonResourceExt {
 
         return personService.findPersonInfoById(id);
     }
+
 }

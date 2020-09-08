@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="report">
+            <h2><span jhiTranslate="customerPortalApp.report.detail.title">Report</span> {{ report.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.report.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'customerPortalApp.ReportType.' + report.type }}">{{ report.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.startPeriod">Start Period</span></dt>
+                <dd>
+                    <span>{{ report.startPeriod }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.endPeriod">End Period</span></dt>
+                <dd>
+                    <span>{{ report.endPeriod }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.name">Name</span></dt>
+                <dd>
+                    <span>{{ report.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.generatedReportName">Generated Report Name</span></dt>
+                <dd>
+                    <span>{{ report.generatedReportName }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.generatedAIFName">Generated AIF Name</span></dt>
+                <dd>
+                    <span>{{ report.generatedAIFName }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.generatedReportLocation">Generated Report Location</span></dt>
+                <dd>
+                    <span>{{ report.generatedReportLocation }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.generatedAIFLocation">Generated AIF Location</span></dt>
+                <dd>
+                    <span>{{ report.generatedAIFLocation }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.report.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="report.customer">
+                        <a [routerLink]="['/customer', report.customer?.id, 'view']">{{ report.customer?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/report', report.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

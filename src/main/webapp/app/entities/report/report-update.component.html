@@ -1,0 +1,137 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-report-heading" jhiTranslate="customerPortalApp.report.home.createOrEditLabel">Create or edit a Report</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.type" for="field_type">Type</label>
+                    <select class="form-control" name="type" formControlName="type" id="field_type">
+                        <option value="IT3B">{{ 'customerPortalApp.ReportType.IT3B' | translate }}</option>
+                        <option value="IT3C">{{ 'customerPortalApp.ReportType.IT3C' | translate }}</option>
+                        <option value="IT3S">{{ 'customerPortalApp.ReportType.IT3S' | translate }}</option>
+                    </select>
+                    <div *ngIf="editForm.get('type')!.invalid && (editForm.get('type')!.dirty || editForm.get('type')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('type')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.startPeriod" for="field_startPeriod">Start Period</label>
+                    <div class="d-flex">
+                        <input id="field_startPeriod" type="datetime-local" class="form-control" name="startPeriod" formControlName="startPeriod" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('startPeriod')!.invalid && (editForm.get('startPeriod')!.dirty || editForm.get('startPeriod')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('startPeriod')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('startPeriod')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.endPeriod" for="field_endPeriod">End Period</label>
+                    <div class="d-flex">
+                        <input id="field_endPeriod" type="datetime-local" class="form-control" name="endPeriod" formControlName="endPeriod" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                    <div *ngIf="editForm.get('endPeriod')!.invalid && (editForm.get('endPeriod')!.dirty || editForm.get('endPeriod')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('endPeriod')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('endPeriod')?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                    <div *ngIf="editForm.get('name')!.invalid && (editForm.get('name')!.dirty || editForm.get('name')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.generatedReportName" for="field_generatedReportName">Generated Report Name</label>
+                    <input type="text" class="form-control" name="generatedReportName" id="field_generatedReportName"
+                           formControlName="generatedReportName"/>
+                    <div *ngIf="editForm.get('generatedReportName')!.invalid && (editForm.get('generatedReportName')!.dirty || editForm.get('generatedReportName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('generatedReportName')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.generatedAIFName" for="field_generatedAIFName">Generated AIF Name</label>
+                    <input type="text" class="form-control" name="generatedAIFName" id="field_generatedAIFName"
+                           formControlName="generatedAIFName"/>
+                    <div *ngIf="editForm.get('generatedAIFName')!.invalid && (editForm.get('generatedAIFName')!.dirty || editForm.get('generatedAIFName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('generatedAIFName')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.generatedReportLocation" for="field_generatedReportLocation">Generated Report Location</label>
+                    <input type="text" class="form-control" name="generatedReportLocation" id="field_generatedReportLocation"
+                           formControlName="generatedReportLocation"/>
+                    <div *ngIf="editForm.get('generatedReportLocation')!.invalid && (editForm.get('generatedReportLocation')!.dirty || editForm.get('generatedReportLocation')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('generatedReportLocation')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.generatedAIFLocation" for="field_generatedAIFLocation">Generated AIF Location</label>
+                    <input type="text" class="form-control" name="generatedAIFLocation" id="field_generatedAIFLocation"
+                           formControlName="generatedAIFLocation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="customerPortalApp.report.customer" for="field_customer">Customer</label>
+                    <select class="form-control" id="field_customer" name="customer" formControlName="customer">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="customerOption.id === editForm.get('customer')!.value?.id ? editForm.get('customer')!.value : customerOption" *ngFor="let customerOption of customers; trackBy: trackById">{{ customerOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="products">
+            <h2><span jhiTranslate="customerPortalApp.products.detail.title">Products</span> {{ products.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.products.name">Name</span></dt>
+                <dd>
+                    <span>{{ products.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.products.price">Price</span></dt>
+                <dd>
+                    <span>{{ products.price }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.products.pictureUrl">Picture Url</span></dt>
+                <dd>
+                    <span>{{ products.pictureUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.products.orders">Orders</span></dt>
+                <dd>
+                    <div *ngIf="products.orders">
+                        <a [routerLink]="['/orders', products.orders?.id, 'view']">{{ products.orders?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/products', products.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

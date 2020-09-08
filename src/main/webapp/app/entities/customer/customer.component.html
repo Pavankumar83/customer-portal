@@ -27,7 +27,6 @@
                     <th scope="col" ><span jhiTranslate="customerPortalApp.customer.identificationType">Identification Type</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.customer.customerType">Customer Type</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.customer.deleted">Deleted</span></th>
-                    <th scope="col" ><span jhiTranslate="customerPortalApp.customer.institution">Institution</span></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -38,11 +37,6 @@
                     <td jhiTranslate="{{ 'customerPortalApp.IdentificationType.' + customer.identificationType }}">{{ customer.identificationType }}</td>
                     <td jhiTranslate="{{ 'customerPortalApp.CustomerType.' + customer.customerType }}">{{ customer.customerType }}</td>
                     <td>{{ customer.deleted }}</td>
-                    <td>
-                        <div *ngIf="customer.institution">
-                            <a [routerLink]="['/institution', customer.institution?.id, 'view']" >{{ customer.institution?.id }}</a>
-                        </div>
-                    </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

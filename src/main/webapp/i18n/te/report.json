@@ -1,0 +1,30 @@
+{
+  "customerPortalApp": {
+    "report": {
+      "home": {
+        "title": "Reports",
+        "createLabel": "కొత్త Report  సృష్టించండి",
+        "createOrEditLabel": "Report సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Reports found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Report సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Report సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Report తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Report {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Report"
+      },
+      "type": "Type",
+      "startPeriod": "Start Period",
+      "endPeriod": "End Period",
+      "name": "Name",
+      "generatedReportName": "Generated Report Name",
+      "generatedAIFName": "Generated AIF Name",
+      "generatedReportLocation": "Generated Report Location",
+      "generatedAIFLocation": "Generated AIF Location",
+      "customer": "Customer"
+    }
+  }
+}

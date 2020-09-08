@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="availableTransaction">
+            <h2><span jhiTranslate="customerPortalApp.availableTransaction.detail.title">Available Transaction</span> {{ availableTransaction.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.transactionId">Transaction Id</span></dt>
+                <dd>
+                    <span>{{ availableTransaction.transactionId }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.transactionType">Transaction Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'customerPortalApp.TransactionType.' + availableTransaction.transactionType }}">{{ availableTransaction.transactionType }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.transactionMode">Transaction Mode</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'customerPortalApp.TransactionMode.' + availableTransaction.transactionMode }}">{{ availableTransaction.transactionMode }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.transAmount">Trans Amount</span></dt>
+                <dd>
+                    <span>{{ availableTransaction.transAmount }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.dateOfTransaction">Date Of Transaction</span></dt>
+                <dd>
+                    <span>{{ availableTransaction.dateOfTransaction }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.customer">Customer</span></dt>
+                <dd>
+                    <div *ngIf="availableTransaction.customer">
+                        <a [routerLink]="['/customer', availableTransaction.customer?.id, 'view']">{{ availableTransaction.customer?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.availableTransaction.account">Account</span></dt>
+                <dd>
+                    <div *ngIf="availableTransaction.account">
+                        <a [routerLink]="['/bank-info', availableTransaction.account?.id, 'view']">{{ availableTransaction.account?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/available-transaction', availableTransaction.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

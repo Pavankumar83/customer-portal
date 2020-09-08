@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="nonWorkingDay">
+            <h2><span jhiTranslate="customerPortalApp.nonWorkingDay.detail.title">Non Working Day</span> {{ nonWorkingDay.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerPortalApp.nonWorkingDay.nonWorkingDay">Non Working Day</span></dt>
+                <dd>
+                    <span>{{ nonWorkingDay.nonWorkingDay }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.nonWorkingDay.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{ nonWorkingDay.deleted }}</span>
+                </dd>
+                <dt><span jhiTranslate="customerPortalApp.nonWorkingDay.institution">Institution</span></dt>
+                <dd>
+                    <div *ngIf="nonWorkingDay.institution">
+                        <a [routerLink]="['/institution', nonWorkingDay.institution?.id, 'view']">{{ nonWorkingDay.institution?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/non-working-day', nonWorkingDay.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

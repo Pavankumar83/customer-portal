@@ -1,0 +1,15 @@
+export const enum TransactionType {
+  INTEREST = 'INTEREST',
+
+  DIVIDENDS = 'DIVIDENDS',
+
+  CAPITAL_GAINS = 'CAPITAL_GAINS',
+
+  ROYALTIES = 'ROYALTIES',
+
+  INVESTMENTS = 'INVESTMENTS',
+
+  PROPERTY = 'PROPERTY',
+
+  ACTIVE = 'ACTIVE',
+}

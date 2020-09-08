@@ -24,11 +24,12 @@
                 <tr>
                     <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.name">Name</span></th>
-                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.accountHolder">Account Holder</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.accountNumber">Account Number</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.accountHolder">Account Holder</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.branchCode">Branch Code</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.branchAddress">Branch Address</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.ifscCode">Ifsc Code</span></th>
+                    <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.institution">Institution</span></th>
                     <th scope="col" ><span jhiTranslate="customerPortalApp.bankInfo.customer">Customer</span></th>
                     <th scope="col"></th>
                 </tr>
@@ -37,11 +38,16 @@
                 <tr *ngFor="let bankInfo of bankInfos ;trackBy: trackId">
                     <td><a [routerLink]="['/bank-info', bankInfo.id, 'view']">{{ bankInfo.id }}</a></td>
                     <td>{{ bankInfo.name }}</td>
-                    <td>{{ bankInfo.accountHolder }}</td>
                     <td>{{ bankInfo.accountNumber }}</td>
+                    <td>{{ bankInfo.accountHolder }}</td>
                     <td>{{ bankInfo.branchCode }}</td>
                     <td>{{ bankInfo.branchAddress }}</td>
                     <td>{{ bankInfo.ifscCode }}</td>
+                    <td>
+                        <div *ngIf="bankInfo.institution">
+                            <a [routerLink]="['/institution', bankInfo.institution?.id, 'view']" >{{ bankInfo.institution?.id }}</a>
+                        </div>
+                    </td>
                     <td>
                         <div *ngIf="bankInfo.customer">
                             <a [routerLink]="['/customer', bankInfo.customer?.id, 'view']" >{{ bankInfo.customer?.id }}</a>

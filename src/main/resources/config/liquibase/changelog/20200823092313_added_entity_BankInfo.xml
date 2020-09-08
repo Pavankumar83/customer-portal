@@ -18,10 +18,10 @@
             <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="account_holder" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="account_number" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="account_holder" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="branch_code" type="varchar(255)">
@@ -31,6 +31,9 @@
                 <constraints nullable="true" />
             </column>
             <column name="ifsc_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="institution_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <column name="customer_id" type="bigint">
@@ -60,8 +63,8 @@
                   tableName="bank_info">
             <column name="id" type="numeric"/>
             <column name="name" type="string"/>
-            <column name="account_holder" type="string"/>
             <column name="account_number" type="string"/>
+            <column name="account_holder" type="string"/>
             <column name="branch_code" type="string"/>
             <column name="branch_address" type="string"/>
             <column name="ifsc_code" type="string"/>

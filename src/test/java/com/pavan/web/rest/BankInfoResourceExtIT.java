@@ -68,7 +68,6 @@ public class BankInfoResourceExtIT {
         BankInfo bankInfo = new BankInfo()
             .name(DEFAULT_NAME)
             .accountHolder(DEFAULT_ACCOUNT_HOLDER)
-            .accountNumber(DEFAULT_ACCOUNT_NUMBER)
             .branchCode(DEFAULT_BRANCH_CODE)
             .branchAddress(DEFAULT_BRANCH_ADDRESS)
             .ifscCode(DEFAULT_IFSC_CODE);
@@ -84,7 +83,6 @@ public class BankInfoResourceExtIT {
         BankInfo bankInfo = new BankInfo()
             .name(UPDATED_NAME)
             .accountHolder(UPDATED_ACCOUNT_HOLDER)
-            .accountNumber(UPDATED_ACCOUNT_NUMBER)
             .branchCode(UPDATED_BRANCH_CODE)
             .branchAddress(UPDATED_BRANCH_ADDRESS)
             .ifscCode(UPDATED_IFSC_CODE);
@@ -112,7 +110,6 @@ public class BankInfoResourceExtIT {
         BankInfo testBankInfo = bankInfoList.get(bankInfoList.size() - 1);
         assertThat(testBankInfo.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testBankInfo.getAccountHolder()).isEqualTo(DEFAULT_ACCOUNT_HOLDER);
-        assertThat(testBankInfo.getAccountNumber()).isEqualTo(DEFAULT_ACCOUNT_NUMBER);
         assertThat(testBankInfo.getBranchCode()).isEqualTo(DEFAULT_BRANCH_CODE);
         assertThat(testBankInfo.getBranchAddress()).isEqualTo(DEFAULT_BRANCH_ADDRESS);
         assertThat(testBankInfo.getIfscCode()).isEqualTo(DEFAULT_IFSC_CODE);
@@ -198,7 +195,6 @@ public class BankInfoResourceExtIT {
         updatedBankInfo
             .name(UPDATED_NAME)
             .accountHolder(UPDATED_ACCOUNT_HOLDER)
-            .accountNumber(UPDATED_ACCOUNT_NUMBER)
             .branchCode(UPDATED_BRANCH_CODE)
             .branchAddress(UPDATED_BRANCH_ADDRESS)
             .ifscCode(UPDATED_IFSC_CODE);
@@ -214,7 +210,6 @@ public class BankInfoResourceExtIT {
         BankInfo testBankInfo = bankInfoList.get(bankInfoList.size() - 1);
         assertThat(testBankInfo.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testBankInfo.getAccountHolder()).isEqualTo(UPDATED_ACCOUNT_HOLDER);
-        assertThat(testBankInfo.getAccountNumber()).isEqualTo(UPDATED_ACCOUNT_NUMBER);
         assertThat(testBankInfo.getBranchCode()).isEqualTo(UPDATED_BRANCH_CODE);
         assertThat(testBankInfo.getBranchAddress()).isEqualTo(UPDATED_BRANCH_ADDRESS);
         assertThat(testBankInfo.getIfscCode()).isEqualTo(UPDATED_IFSC_CODE);

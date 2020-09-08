@@ -1,0 +1,32 @@
+{
+  "name": "Orders",
+  "fields": [
+    {
+      "fieldName": "dateCreated",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "orders",
+      "relationshipName": "products"
+    }
+  ],
+  "changelogDate": "20200901085850",
+  "entityTableName": "orders",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

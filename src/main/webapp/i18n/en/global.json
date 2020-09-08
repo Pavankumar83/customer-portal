@@ -15,6 +15,12 @@
         "customerAddress": "Customer Address",
         "institution": "Institution",
         "bankInfo": "Bank Info",
+        "availableTransaction": "Available Transaction",
+        "report": "Report",
+        "products": "Products",
+        "orders": "Orders",
+        "orderProduct": "Order Product",
+        "nonWorkingDay": "Non Working Day",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

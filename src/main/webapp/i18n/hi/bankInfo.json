@@ -17,11 +17,13 @@
         "title": "Bank Info"
       },
       "name": "Name",
-      "accountHolder": "Account Holder",
       "accountNumber": "Account Number",
+      "accountHolder": "Account Holder",
       "branchCode": "Branch Code",
       "branchAddress": "Branch Address",
       "ifscCode": "Ifsc Code",
+      "availableTransaction": "Available Transaction",
+      "institution": "Institution",
       "customer": "Customer"
     }
   }

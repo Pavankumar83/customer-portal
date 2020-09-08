@@ -1,0 +1,28 @@
+{
+  "customerPortalApp": {
+    "availableTransaction": {
+      "home": {
+        "title": "Available Transactions",
+        "createLabel": "కొత్త Available Transaction  సృష్టించండి",
+        "createOrEditLabel": "Available Transaction సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Available Transactions found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Available Transaction సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Available Transaction సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Available Transaction తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Available Transaction {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Available Transaction"
+      },
+      "transactionId": "Transaction Id",
+      "transactionType": "Transaction Type",
+      "transactionMode": "Transaction Mode",
+      "transAmount": "Trans Amount",
+      "dateOfTransaction": "Date Of Transaction",
+      "customer": "Customer",
+      "account": "Account"
+    }
+  }
+}

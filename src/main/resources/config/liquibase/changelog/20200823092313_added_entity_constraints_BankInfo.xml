@@ -8,6 +8,12 @@
     -->
     <changeSet id="20200823092313-2" author="jhipster">
         
+        <addForeignKeyConstraint baseColumnNames="institution_id"
+                                 baseTableName="bank_info"
+                                 constraintName="fk_bank_info_institution_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="institution"/>
+
         <addForeignKeyConstraint baseColumnNames="customer_id"
                                  baseTableName="bank_info"
                                  constraintName="fk_bank_info_customer_id"

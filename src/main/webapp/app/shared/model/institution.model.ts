@@ -1,4 +1,5 @@
-import { ICustomer } from 'app/shared/model/customer.model';
+import { IBankInfo } from 'app/shared/model/bank-info.model';
+import { INonWorkingDay } from 'app/shared/model/non-working-day.model';
 
 export interface IInstitution {
   id?: number;
@@ -7,7 +8,8 @@ export interface IInstitution {
   taxNumber?: string;
   url?: string;
   deleted?: boolean;
-  customers?: ICustomer[];
+  bankInfos?: IBankInfo[];
+  nonWorkingDays?: INonWorkingDay[];
 }
 
 export class Institution implements IInstitution {
@@ -18,7 +20,8 @@ export class Institution implements IInstitution {
     public taxNumber?: string,
     public url?: string,
     public deleted?: boolean,
-    public customers?: ICustomer[]
+    public bankInfos?: IBankInfo[],
+    public nonWorkingDays?: INonWorkingDay[]
   ) {
     this.deleted = this.deleted || false;
   }

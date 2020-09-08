@@ -73,8 +73,8 @@ class BankInfoGatlingTest extends Simulation {
             .body(StringBody("""{
                 "id":null
                 , "name":"SAMPLE_TEXT"
-                , "accountHolder":"SAMPLE_TEXT"
                 , "accountNumber":"SAMPLE_TEXT"
+                , "accountHolder":"SAMPLE_TEXT"
                 , "branchCode":"SAMPLE_TEXT"
                 , "branchAddress":"SAMPLE_TEXT"
                 , "ifscCode":"SAMPLE_TEXT"
