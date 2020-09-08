@@ -1,0 +1,85 @@
+{
+    "reportingPeriod": "2020-07-01T00:29:24Z to  2020-08-30T23:29:24Z",
+    "dateOfGenerated": {
+        "epochSecond": 1598877031,
+        "nano": 112000000
+    },
+    "additionalReportData": [
+        {
+            "transactionId": "generate compressing Automotive",
+            "transactionType": "INVESTMENTS",
+            "transactionMode": "CREDIT",
+            "transAmount": 68760.0,
+            "dateOfTransaction": {
+                "epochSecond": 1595935764,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "Planner",
+            "transactionType": "INVESTMENTS",
+            "transactionMode": "CREDIT",
+            "transAmount": 62532.0,
+            "dateOfTransaction": {
+                "epochSecond": 1598619747,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "utilisation SSL",
+            "transactionType": "PROPERTY",
+            "transactionMode": "DEBIT",
+            "transAmount": 43637.0,
+            "dateOfTransaction": {
+                "epochSecond": 1595738705,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "Optimized Outdoors",
+            "transactionType": "CAPITAL_GAINS",
+            "transactionMode": "CREDIT",
+            "transAmount": 24808.0,
+            "dateOfTransaction": {
+                "epochSecond": 1598667224,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "matrix Officer",
+            "transactionType": "PROPERTY",
+            "transactionMode": "CREDIT",
+            "transAmount": 34082.0,
+            "dateOfTransaction": {
+                "epochSecond": 1597473302,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "ROI asymmetric networks",
+            "transactionType": "ROYALTIES",
+            "transactionMode": "DEBIT",
+            "transAmount": 99495.0,
+            "dateOfTransaction": {
+                "epochSecond": 1596003893,
+                "nano": 0
+            }
+        },
+        {
+            "transactionId": "incubate",
+            "transactionType": "CAPITAL_GAINS",
+            "transactionMode": "DEBIT",
+            "transAmount": 97053.0,
+            "dateOfTransaction": {
+                "epochSecond": 1595374476,
+                "nano": 0
+            }
+        }
+    ],
+    "customer": {
+        "name": "Assistant",
+        "id": 1,
+        "customerType": "INDIVIDUAL",
+        "identificationType": "OTHER"
+    }
+}

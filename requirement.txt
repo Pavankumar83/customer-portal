@@ -1,0 +1,25 @@
+calculate FutureWorkingDay based on startDay and number of Days
+Note1: Exclude all non working days that are in the table
+
+Calculate the number of working days between the 2 days
+
+
+30-08-2020,s
+15-09-2020,e
+n
+[02-09-2020 , 09-09-2020]=nwl
+x = n-2
+
+------------------
+Pagination/Page Sorting
+--------------------
+Add 100 customers
+Retrieve customers by page size and page number(page(1,10))  100 elements to 10 to 20
+Sort Customers based on their provided field from front end
+---------------------------------
+open a file from a  folder
+convert the file into a java object
+persist it into a existing table in the database
+---------------------------------------------------------
+
+
